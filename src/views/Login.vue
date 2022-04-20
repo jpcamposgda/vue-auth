@@ -8,7 +8,7 @@
             </div>
             <div class="form.group">
                 
-                <input type="password" class="form-control" v-model="usuario.senha" placeholder="Senha">
+                <input type="password" class="form-control" v-model="usuario.password" placeholder="Password">
             </div>
             <div class="form.group pt-4">
             <button type='submit' class="btn btn-primary brn-block mb-2"> 

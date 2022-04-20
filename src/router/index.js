@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import NovoUsuario from '../views/NovoUsuario'
 import Login from '../views/Login'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,7 +29,9 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
- }
+ },
+ 
+
 
 ]
 

@@ -4,7 +4,7 @@
         <form @submit.prevent="enviarFormulario" >
             <div class="form-group pt-3">
                
-                <input type="text" class="form-control" v-model="usuario.nome" placeholder="Nome" >
+                <input type="text" class="form-control" v-model="usuario.username" placeholder="Username" >
             </div>
             <div class="form-group">
                 
@@ -12,7 +12,7 @@
             </div>
             <div class="form-group">
                 
-                <input type="password" class="form-control" v-model="usuario.senha" placeholder="Senha" >
+                <input type="password" class="form-control" v-model="usuario.password" placeholder="Password" >
             </div>
             <button class="btn btn-primary" type="submit">Criar</button>
         </form>
@@ -27,8 +27,8 @@ export default {
 data: function() {
     return {
         usuario: {
-            nome: '',
-            senha:'',
+            username: '',
+            password:'',
             email:''
         }
     }
@@ -36,7 +36,7 @@ data: function() {
 
 methods: {
         enviarFormulario() {
-          this.$http.post("http://localhost:8000/auth/register", this.usuario)
+          this.$http.post("/users", this.usuario)
             .then(resposta => { 
                 console.log(resposta)
                 this.$router.push({ name: 'login' })
